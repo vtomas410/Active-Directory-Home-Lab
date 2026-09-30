@@ -69,32 +69,39 @@ Navigate to the official VMware Workstation Pro website and download the softwar
 3. If you do not already have a Broadcom account, select **Register** to create one.
 4. Complete the registration process and sign in to your Broadcom account.
 5. Once signed in, proceed with the download of **VMware Workstation Pro**.
-<img src="https://imgur.com/a/JBTIZp0" height="80%" width="80%" alt=/>
-<br />
-<br />
-Select the disk:  <br/>
-<img src="https://imgur.com/a/JBTIZp0" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
+6. After downloading the installer, go ahead and install VMWare Workstation Pro.
+
+<img width="1679" height="864" alt="Broadcom Vmare Screenshot" src="https://github.com/user-attachments/assets/bc475107-106a-4aec-860d-c64ac60aca71" />
+
+
+
+II. Creating a new Virtual Machine on VMWare Workstation Pro with Windows Server 2025
+ISO
+# Installing Windows Server 2025 on VMware Workstation Pro
+
+1. Download the **Windows Server 2025 evaluation ISO** from the Microsoft link below. Complete the registration for the free trial and select **English (United States)** and the **64-bit ISO** edition.
+
+https://info.microsoft.com/ww-landing-evaluate-windows-server-2025.html
+
+2. Open **VMware Workstation Pro** and select **Create a New Virtual Machine**.
+
+3. Select **I will install the operating system later** and click **Next**.
+
+4. Under **Guest Operating System**, select **Microsoft Windows**. From the version dropdown, select **Windows Server 2025** and click **Next**.
+
+5. Enter a name for the virtual machine and select where you want to save it. Click **Next**.
+
+6. Continue through the **Specify Disk Capacity** section and click **Customize Hardware**.
+
+7. Select **CD/DVD (SATA)**. Under **Connection**, select **Use ISO image file**, then click **Browse** and select the Windows Server 2025 ISO downloaded earlier. Click **Close**.
+
+8. Click **Finish** to create the virtual machine.
+
+The Windows Server 2025 virtual machine is now created and ready for installation.
+
+
+
+
 
 <!--
  ```diff

@@ -59,12 +59,21 @@ This project was built as part of my IT/cybersecurity home lab to develop practi
 <h2>Program walk-through:</h2>
 
 <p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+ <br/>
+I. Installing VMWare Workstation Pro
+  
+Navigate to the official VMware Workstation Pro website and download the software from the Broadcom website.
+
+1. Go to the [VMware Workstation Pro download page](https://www.vmware.com/products/desktop-hypervisor.html).
+2. Click **Login** in the upper-right corner of the page.
+3. If you do not already have a Broadcom account, select **Register** to create one.
+4. Complete the registration process and sign in to your Broadcom account.
+5. Once signed in, proceed with the download of **VMware Workstation Pro**.
+<img src="https://imgur.com/a/JBTIZp0" height="80%" width="80%" alt=/>
 <br />
 <br />
 Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/a/JBTIZp0" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 Enter the number of passes: <br/>

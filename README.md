@@ -60,9 +60,12 @@ This project was built as part of my IT/cybersecurity home lab to develop practi
 
 <p align="center">
  <br/>
-I. Installing VMWare Workstation Pro
+
+# 1. Installing VMware Workstation Pro  
   
-Navigate to the official VMware Workstation Pro website and download the software from the Broadcom website.
+I downloaded and installed VMware Workstation Pro and created a Broadcom account to access the VMware downloads.
+
+Steps:
 
 1. Go to the [VMware Workstation Pro download page](https://www.vmware.com/products/desktop-hypervisor.html).
 2. Click **Login** in the upper-right corner of the page.
@@ -75,31 +78,104 @@ Navigate to the official VMware Workstation Pro website and download the softwar
 
 
 
-II. Creating a new Virtual Machine on VMWare Workstation Pro with Windows Server 2025
-ISO
-# Installing Windows Server 2025 on VMware Workstation Pro
+# 2. Creating a new Virtual Machine on VMWare Workstation Pro with Windows Server 2025 ISO
+
+I downloaded the Windows Server 2025 evaluation ISO directly from Microsoft.
+
 
 1. Download the **Windows Server 2025 evaluation ISO** from the Microsoft link below. Complete the registration for the free trial and select **English (United States)** and the **64-bit ISO** edition.
-
 https://info.microsoft.com/ww-landing-evaluate-windows-server-2025.html
-
 2. Open **VMware Workstation Pro** and select **Create a New Virtual Machine**.
-
 3. Select **I will install the operating system later** and click **Next**.
-
 4. Under **Guest Operating System**, select **Microsoft Windows**. From the version dropdown, select **Windows Server 2025** and click **Next**.
-
 5. Enter a name for the virtual machine and select where you want to save it. Click **Next**.
-
 6. Continue through the **Specify Disk Capacity** section and click **Customize Hardware**.
-
 7. Select **CD/DVD (SATA)**. Under **Connection**, select **Use ISO image file**, then click **Browse** and select the Windows Server 2025 ISO downloaded earlier. Click **Close**.
-
 8. Click **Finish** to create the virtual machine.
 
 The Windows Server 2025 virtual machine is now created and ready for installation.
 
 
+# 3. Creating the Virtual Machine
+
+
+I created a new virtual machine in VMware Workstation Pro and configured it to use the Windows Server 2025 ISO.
+
+Configuration process:
+
+1. Go to the Microsoft Windows Server 2025 evaluation page.
+2. Register for the free evaluation.
+3. Select:
+   - English (United States)
+   - ISO download
+   - 64-bit
+4. Download the Windows Server 2025 ISO.
+
+
+# 4. Create the Windows Server Virtual Machine
+1. Open VMware Workstation Pro.
+2. Select Create a New Virtual Machine.
+3. Select I will install the operating system later.
+4. Select Microsoft Windows.
+5. Select Windows Server 2025.
+6. Enter a name for the virtual machine.
+7. Continue to Specify Disk Capacity.
+8. Select Customize Hardware.
+
+
+Configure the ISO
+
+10. Select New CD/DVD (SATA).
+11. Select Use ISO image file.
+12. Browse to the Windows Server 2025 ISO.
+13. Select Close.
+14. Click Finish.
+The Windows Server virtual machine is now created.
+
+# 5. Install Windows Server 2025
+
+1. Right-click the virtual machine.
+2. Select Power On.
+3. Click inside the VM and press a key to start Windows Setup.
+4. Select Next on the language screen.
+5. Select Install Now.
+6. Select: Windows Server 2025 Standard Evaluation (Desktop Experience)
+7. Accept the license terms.
+8. Select Custom: Install Windows only (advanced).
+9. Select the Unallocated Space drive.
+10. Click Next.
+11. Wait for Windows Server to finish installing.
+12. The VM will restart automatically.
+13. Create the Administrator password.
+14. Log in to Windows Server.
+
+# 6. Install VMware Tools
+
+1. Power on the Windows Server VM.
+2. From the VMware menu, select: VM → Install VMware Tools
+3. Log in to Windows Server.
+4. Open File Explorer.
+5. Open This PC.
+6. Locate the VMware Tools virtual CD/DVD drive.
+7. Open the drive.
+8. Run setup.exe.
+9. Select Typical installation.
+10. Follow the installation prompts.
+11. Restart the virtual machine.
+
+
+# 7. Lab Status
+
+At this point, I have:
+1. Installed VMware Workstation Pro
+2. Downloaded Windows Server 2025
+3. Created a Windows Server 2025 virtual machine
+4. Installed Windows Server 2025
+5. Created the Administrator account
+6. Installed VMware Tools
+7. Restarted the Windows Server VM
+  
+Next: Configure the Windows Server environment for the Active Directory lab.
 
 
 

@@ -85,13 +85,21 @@ I downloaded the Windows Server 2025 evaluation ISO directly from Microsoft.
 
 1. Download the **Windows Server 2025 evaluation ISO** from the Microsoft link below. Complete the registration for the free trial and select **English (United States)** and the **64-bit ISO** edition.
 https://info.microsoft.com/ww-landing-evaluate-windows-server-2025.html
-2. Open **VMware Workstation Pro** and select **Create a New Virtual Machine**.
-3. Select **I will install the operating system later** and click **Next**.
-4. Under **Guest Operating System**, select **Microsoft Windows**. From the version dropdown, select **Windows Server 2025** and click **Next**.
-5. Enter a name for the virtual machine and select where you want to save it. Click **Next**.
-6. Continue through the **Specify Disk Capacity** section and click **Customize Hardware**.
-7. Select **CD/DVD (SATA)**. Under **Connection**, select **Use ISO image file**, then click **Browse** and select the Windows Server 2025 ISO downloaded earlier. Click **Close**.
-8. Click **Finish** to create the virtual machine.
+
+<img width="432" height="453" alt="Microsoft vmare " src="https://github.com/user-attachments/assets/e6fd0c67-480e-42ee-9f5b-ba3ee1d14066" />
+
+3. Open **VMware Workstation Pro** and select **Create a New Virtual Machine**.
+4. Select **I will install the operating system later** and click **Next**.
+
+<img width="1529" height="849" alt="Vmware New virtual machine" src="https://github.com/user-attachments/assets/9036ccc3-2dc8-45cd-95f3-fe3f99516458" />
+   
+5. Under **Guest Operating System**, select **Microsoft Windows**. From the version dropdown, select **Windows Server 2025** and click **Next**.
+6. Enter a name for the virtual machine and select where you want to save it. Click **Next**.
+7. Continue through the **Specify Disk Capacity** section and click **Customize Hardware**.
+8. Select **CD/DVD (SATA)**. Under **Connection**, select **Use ISO image file**, then click **Browse** and select the Windows Server 2025 ISO downloaded earlier. Click **Close**.
+9. Click **Finish** to create the virtual machine.
+
+<img width="676" height="595" alt="VM machine created" src="https://github.com/user-attachments/assets/7413109f-1ed0-4ae9-b8bf-8a6418543d44" />
 
 The Windows Server 2025 virtual machine is now created and ready for installation.
 

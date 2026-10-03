@@ -61,130 +61,441 @@ This project was built as part of my IT/cybersecurity home lab to develop practi
 <p align="center">
  <br/>
 
-# 1. Installing VMware Workstation Pro  
-  
-I downloaded and installed VMware Workstation Pro and created a Broadcom account to access the VMware downloads.
+---
 
-Steps:
+# 1. Install VMware Workstation Pro
 
-1. Go to the [VMware Workstation Pro download page](https://www.vmware.com/products/desktop-hypervisor.html).
-2. Click **Login** in the upper-right corner of the page.
-3. If you do not already have a Broadcom account, select **Register** to create one.
-4. Complete the registration process and sign in to your Broadcom account.
-5. Once signed in, proceed with the download of **VMware Workstation Pro**.
-6. After downloading the installer, go ahead and install VMWare Workstation Pro.
+1. Download VMware Workstation Pro.
+2. Create or sign in to a Broadcom account if required.
+3. Download the appropriate VMware Workstation Pro installer.
+4. Run the installer.
+5. Follow the installation wizard.
+6. Complete the installation.
+7. Restart the computer if prompted.
 
-<img width="1679" height="864" alt="Broadcom Vmare Screenshot" src="https://github.com/user-attachments/assets/bc475107-106a-4aec-860d-c64ac60aca71" />
+---
 
+# 2. Download Windows Server ISO
 
+1. Go to Microsoft's Windows Server evaluation page.
+2. Register for the evaluation if required.
+3. Download the Windows Server 2022 ISO.
+4. Save the ISO somewhere easy to locate.
 
-# 2. Creating a new Virtual Machine on VMWare Workstation Pro with Windows Server 2025 ISO
+The video uses Windows Server 2022 as the server operating system.
 
-I downloaded the Windows Server 2025 evaluation ISO directly from Microsoft.
+---
 
+# 3. Create the Windows Server Virtual Machine
 
-1. Download the **Windows Server 2025 evaluation ISO** from the Microsoft link below. Complete the registration for the free trial and select **English (United States)** and the **64-bit ISO** edition.
-https://info.microsoft.com/ww-landing-evaluate-windows-server-2025.html
-
-<img width="432" height="453" alt="Microsoft vmare " src="https://github.com/user-attachments/assets/e6fd0c67-480e-42ee-9f5b-ba3ee1d14066" />
-
-3. Open **VMware Workstation Pro** and select **Create a New Virtual Machine**.
-4. Select **I will install the operating system later** and click **Next**.
-
-<img width="1529" height="849" alt="Vmware New virtual machine" src="https://github.com/user-attachments/assets/9036ccc3-2dc8-45cd-95f3-fe3f99516458" />
-   
-5. Under **Guest Operating System**, select **Microsoft Windows**. From the version dropdown, select **Windows Server 2025** and click **Next**.
-6. Enter a name for the virtual machine and select where you want to save it. Click **Next**.
-7. Continue through the **Specify Disk Capacity** section and click **Customize Hardware**.
-8. Select **CD/DVD (SATA)**. Under **Connection**, select **Use ISO image file**, then click **Browse** and select the Windows Server 2025 ISO downloaded earlier. Click **Close**.
-9. Click **Finish** to create the virtual machine.
-
-<img width="676" height="595" alt="VM machine created" src="https://github.com/user-attachments/assets/7413109f-1ed0-4ae9-b8bf-8a6418543d44" />
-
-The Windows Server 2025 virtual machine is now created and ready for installation.
-
-
-# 3. Creating the Virtual Machine
-
-
-I created a new virtual machine in VMware Workstation Pro and configured it to use the Windows Server 2025 ISO.
-
-Configuration process:
-
-1. Go to the Microsoft Windows Server 2025 evaluation page.
-2. Register for the free evaluation.
-3. Select:
-   - English (United States)
-   - ISO download
-   - 64-bit
-4. Download the Windows Server 2025 ISO.
-
-
-# 4. Create the Windows Server Virtual Machine
 1. Open VMware Workstation Pro.
-2. Select Create a New Virtual Machine.
-3. Select I will install the operating system later.
-4. Select Microsoft Windows.
-5. Select Windows Server 2025.
-6. Enter a name for the virtual machine.
-7. Continue to Specify Disk Capacity.
-8. Select Customize Hardware.
+2. Select **Create a New Virtual Machine**.
+3. Select **Typical** configuration.
+4. Choose:
 
+   **I will install the operating system later**
 
-Configure the ISO
+5. Select **Microsoft Windows** as the guest operating system.
+6. Select the appropriate Windows Server version.
+7. Give the VM a name.
 
-10. Select New CD/DVD (SATA).
-11. Select Use ISO image file.
-12. Browse to the Windows Server 2025 ISO.
-13. Select Close.
-14. Click Finish.
-The Windows Server virtual machine is now created.
+Example:
 
-# 5. Install Windows Server 2025
+`Windows Server 2022 - Domain Controller`
 
-1. Right-click the virtual machine.
-2. Select Power On.
-3. Click inside the VM and press a key to start Windows Setup.
-4. Select Next on the language screen.
-5. Select Install Now.
-6. Select: Windows Server 2025 Standard Evaluation (Desktop Experience)
-7. Accept the license terms.
-8. Select Custom: Install Windows only (advanced).
-9. Select the Unallocated Space drive.
-10. Click Next.
-11. Wait for Windows Server to finish installing.
-12. The VM will restart automatically.
-13. Create the Administrator password.
-14. Log in to Windows Server.
+8. Select the location where the VM will be stored.
+9. Configure the virtual disk.
+10. Finish creating the VM.
 
-# 6. Install VMware Tools
+---
 
-1. Power on the Windows Server VM.
-2. From the VMware menu, select: VM → Install VMware Tools
-3. Log in to Windows Server.
-4. Open File Explorer.
-5. Open This PC.
-6. Locate the VMware Tools virtual CD/DVD drive.
-7. Open the drive.
-8. Run setup.exe.
-9. Select Typical installation.
-10. Follow the installation prompts.
-11. Restart the virtual machine.
+# 4. Mount the Windows Server ISO
 
+1. Select the new virtual machine.
+2. Open **Virtual Machine Settings**.
+3. Select **CD/DVD**.
+4. Select **Use ISO image file**.
+5. Browse to the Windows Server ISO.
+6. Select the ISO.
+7. Save the VM settings.
 
-# 7. Lab Status
+---
 
-At this point, I have:
-1. Installed VMware Workstation Pro
-2. Downloaded Windows Server 2025
-3. Created a Windows Server 2025 virtual machine
-4. Installed Windows Server 2025
-5. Created the Administrator account
-6. Installed VMware Tools
-7. Restarted the Windows Server VM
-  
-Next: Configure the Windows Server environment for the Active Directory lab.
+# 5. Install Windows Server
 
+1. Start the virtual machine.
+2. Boot from the Windows Server ISO.
+3. Select the appropriate language settings.
+4. Select **Next**.
+5. Click **Install Now**.
+6. Select:
+
+   **Windows Server Standard Evaluation (Desktop Experience)**
+
+7. Accept the license agreement.
+8. Select **Custom Installation**.
+9. Select the virtual disk.
+10. Allow Windows to install.
+11. Wait for the VM to restart.
+
+---
+
+# 6. Configure the Administrator Account
+
+After installation:
+
+1. Create a password for the local Administrator account.
+2. Log into Windows Server.
+3. Wait for Server Manager to load.
+
+---
+
+# 7. Verify the Windows Server Version
+
+Open the Run dialog:
+
+`Windows Key + R`
+
+Enter:
+
+`winver`
+
+Verify that Windows Server is installed correctly.
+
+---
+
+# 8. Install Active Directory Domain Services
+
+1. Open **Server Manager**.
+2. Select **Manage**.
+3. Select **Add Roles and Features**.
+4. Continue through the installation wizard.
+5. Select:
+
+   **Role-based or feature-based installation**
+
+6. Select the local server.
+7. Select:
+
+   **Active Directory Domain Services**
+
+8. When prompted, select **Add Features**.
+9. Continue through the wizard.
+10. Make sure the required management tools are selected.
+11. Select **Install**.
+12. Wait for the installation to complete.
+
+---
+
+# 9. Promote the Server to a Domain Controller
+
+After AD DS is installed:
+
+1. Open Server Manager.
+2. Select the notification flag.
+3. Select:
+
+   **Promote this server to a domain controller**
+
+4. Select:
+
+   **Add a new forest**
+
+5. Enter a domain name.
+
+Example:
+
+`example.local`
+
+6. Configure the Domain Controller options.
+7. Set the Directory Services Restore Mode (DSRM) password.
+8. Continue through the wizard.
+9. Review the prerequisites.
+10. Select **Install**.
+
+The server will restart after the domain controller installation is completed.
+
+---
+
+# 10. Log Into the Domain
+
+After the restart:
+
+1. Log into Windows Server.
+2. Use the domain administrator account.
+3. Verify that the server is now operating as a Domain Controller.
+
+Example domain:
+
+`EXAMPLE\Administrator`
+
+---
+
+# 11. Open Active Directory Users and Computers
+
+Open:
+
+**Server Manager → Tools → Active Directory Users and Computers**
+
+ADUC is used to manage:
+
+- Users
+- Groups
+- Computers
+- Organizational Units
+- Other Active Directory objects
+
+---
+
+# 12. Create an Organizational Unit
+
+Organizational Units (OUs) can be used to organize Active Directory objects.
+
+1. Open **Active Directory Users and Computers**.
+2. Right-click the domain.
+3. Select:
+
+   **New → Organizational Unit**
+
+4. Enter the OU name.
+
+Example:
+
+`USA`
+
+5. Click **OK**.
+
+Additional OUs can be created for departments, users, computers, or geographic locations.
+
+Example structure:
+
+```text
+example.local
+│
+├── USA
+│   ├── Users
+│   ├── Computers
+│   ├── IT
+│   └── HR
+│
+├── Europe
+│
+└── Asia
+```
+
+OUs can also be nested inside other OUs.
+
+---
+
+# 13. Create Active Directory Groups
+
+1. Open the appropriate OU.
+2. Right-click inside the OU.
+3. Select:
+
+   **New → Group**
+
+4. Enter the group name.
+
+Example:
+
+`IT-Admins`
+
+5. Select the appropriate group scope.
+6. Select the group type.
+7. Click **OK**.
+
+---
+
+# 14. Understand Group Scope
+
+Active Directory provides three main group scopes:
+
+### Global
+
+Typically used to group users from the same domain based on their role or department.
+
+Example:
+
+`IT-Users`
+
+### Domain Local
+
+Typically used when assigning permissions to resources within the domain.
+
+Example:
+
+`File-Server-Access`
+
+### Universal
+
+Can be used across multiple domains in an Active Directory forest.
+
+---
+
+# 15. Understand Group Types
+
+There are two primary group types:
+
+### Security Group
+
+Used to assign permissions and access to resources.
+
+Examples:
+
+- File shares
+- Folders
+- Applications
+- Printers
+
+### Distribution Group
+
+Primarily used for email distribution.
+
+Distribution groups do not provide resource permissions like security groups.
+
+---
+
+# 16. Create an Active Directory User
+
+1. Open the appropriate OU.
+2. Right-click inside the OU.
+3. Select:
+
+   **New → User**
+
+4. Enter the user's first name.
+5. Enter the last name.
+6. Create the user's logon name.
+7. Click **Next**.
+8. Create a temporary password.
+9. Configure the appropriate password options.
+10. Click **Next**.
+11. Review the account information.
+12. Select **Finish**.
+
+Example:
+
+```text
+First Name: John
+Last Name: Smith
+Username: jsmith
+```
+
+---
+
+# 17. Add the User to a Group
+
+1. Locate the newly created user.
+2. Right-click the account.
+3. Select **Properties**.
+4. Open the **Member Of** tab.
+5. Select **Add**.
+6. Enter the appropriate security group.
+7. Confirm the group.
+8. Apply the changes.
+
+Example:
+
+```text
+John Smith
+    ↓
+IT-Users
+    ↓
+IT-Admins
+```
+
+---
+
+# 18. Basic Active Directory Practice
+
+After completing the initial setup, practice common administrative tasks.
+
+### User Management
+
+- Create users
+- Disable users
+- Enable users
+- Reset passwords
+- Unlock accounts
+- Add users to groups
+- Remove users from groups
+
+### Group Management
+
+- Create security groups
+- Create distribution groups
+- Modify group membership
+- Configure group scope
+- Assign permissions
+
+### OU Management
+
+- Create OUs
+- Move users between OUs
+- Move computers between OUs
+- Create nested OUs
+
+---
+
+# 19. Suggested Home Lab Structure
+
+A basic lab can be organized like this:
+
+```text
+Active Directory Domain
+│
+├── USA
+│   │
+│   ├── Users
+│   │   ├── IT
+│   │   ├── HR
+│   │   └── Finance
+│   │
+│   ├── Computers
+│   │
+│   └── Groups
+│
+└── Domain Controllers
+```
+
+---
+
+# 20. Skills Demonstrated
+
+This project demonstrates practical experience with:
+
+- VMware virtualization
+- Windows Server administration
+- Active Directory Domain Services
+- Domain Controller deployment
+- Active Directory Users and Computers
+- Organizational Units
+- User account management
+- Security groups
+- Distribution groups
+- Group scopes
+- Domain authentication
+- Basic Windows Server administration
+
+---
+
+# Project Outcome
+
+The completed lab provides a controlled environment for practicing Active Directory administration and common IT support tasks.
+
+Future additions to the lab can include:
+
+- Group Policy Objects (GPOs)
+- Windows client domain joining
+- DNS configuration
+- DHCP
+- File sharing
+- Security policies
+- Service accounts
+- Password policies
+- User lockout policies
+- Help desk troubleshooting scenarios
 
 
 <!--

@@ -67,7 +67,8 @@ This project was built as part of my IT/cybersecurity home lab to develop practi
 
 1. Download VMware Workstation Pro.
 2. Create or sign in to a Broadcom account if required.
-3. Download the appropriate VMware Workstation Pro installer.
+3. Download the appropriate VMware Workstation Pro installer<img width="1679" height="864" alt="Broadcom Vmare Screenshot" src="https://github.com/user-attachments/assets/6d8d5262-6cf0-45b3-abf1-b4713d696f8a" />
+.
 4. Run the installer.
 5. Follow the installation wizard.
 6. Complete the installation.
@@ -75,21 +76,36 @@ This project was built as part of my IT/cybersecurity home lab to develop practi
 
 ---
 
-# 2. Download Windows Server ISO
+# 2. Download Windows Server ISO 
 
 1. Go to Microsoft's Windows Server evaluation page.
 2. Register for the evaluation if required.
 3. Download the Windows Server 2022 ISO.
-4. Save the ISO somewhere easy to locate.
+4. Save the ISO somewhere easy to locate.<img width="432" height="453" alt="Microsoft vmare " src="https://github.com/user-attachments/assets/4a4f173b-ba2f-4665-9ef5-683dc5ce9a96" />
+
 
 The video uses Windows Server 2022 as the server operating system.
+
+# Troubleshooting:
+ 
+During the initial setup of the home lab, I encountered an issue with the Windows Server installation. I had accidentally installed the Microsoft Windows Server ISO directly onto my physical computer instead of installing it inside the VMware virtual machine.
+
+Because of this, I was unable to continue with the planned virtualized Active Directory lab environment.
+
+To resolve the issue, I had to take a detour and reconfigure my physical computer. I created a bootable USB drive containing the Windows installation media and used it to access the Windows recovery and installation environment.
+
+I then wiped the existing installation from the computer and performed a clean Windows installation. After restoring the computer to a working state, I reinstalled and configured the necessary virtualization software so I could restart the lab using the correct virtual machine setup.
+
+For the remainder of the project, Windows Server was installed inside VMware rather than directly onto the physical computer.
+
 
 ---
 
 # 3. Create the Windows Server Virtual Machine
 
 1. Open VMware Workstation Pro.
-2. Select **Create a New Virtual Machine**.
+2. Select **Create a New Virtual Machine**.<img width="1529" height="849" alt="Vmware New virtual machine" src="https://github.com/user-attachments/assets/a7321219-7f9d-4940-b149-65c4f9eab698" />
+
 3. Select **Typical** configuration.
 4. Choose:
 
@@ -98,6 +114,7 @@ The video uses Windows Server 2022 as the server operating system.
 5. Select **Microsoft Windows** as the guest operating system.
 6. Select the appropriate Windows Server version.
 7. Give the VM a name.
+<img width="676" height="595" alt="VM machine created" src="https://github.com/user-attachments/assets/8742ac03-2b99-4ae8-909c-c6fed0fe7255" />
 
 Example:
 
@@ -117,7 +134,8 @@ Example:
 4. Select **Use ISO image file**.
 5. Browse to the Windows Server ISO.
 6. Select the ISO.
-7. Save the VM settings.
+7. Save the VM settings.<img width="1104" height="952" alt="CD-DVD ISO Location" src="https://github.com/user-attachments/assets/09b845fe-e9b3-4e14-9cdf-ec6315046336" />
+
 
 ---
 
@@ -126,7 +144,8 @@ Example:
 1. Start the virtual machine.
 2. Boot from the Windows Server ISO.
 3. Select the appropriate language settings.
-4. Select **Next**.
+4. Select **Next**.<img width="1324" height="954" alt="microsoft ISO installation on vmware" src="https://github.com/user-attachments/assets/f54a2686-f26c-4407-86b6-35418cc3f6d1" />
+
 5. Click **Install Now**.
 6. Select:
 
@@ -136,6 +155,7 @@ Example:
 8. Select **Custom Installation**.
 9. Select the virtual disk.
 10. Allow Windows to install.
+
 11. Wait for the VM to restart.
 
 ---
@@ -146,7 +166,7 @@ After installation:
 
 1. Create a password for the local Administrator account.
 2. Log into Windows Server.
-3. Wait for Server Manager to load.
+3. Wait for Server Manager to load.<img width="1314" height="980" alt="microsoft ISO admin setup" src="https://github.com/user-attachments/assets/6cbf72b5-8e11-421e-a643-150f08573379" />
 
 ---
 
@@ -183,7 +203,8 @@ Verify that Windows Server is installed correctly.
 9. Continue through the wizard.
 10. Make sure the required management tools are selected.
 11. Select **Install**.
-12. Wait for the installation to complete.
+12. Wait for the installation to complete.<img width="1060" height="820" alt="Configure a Domain Controller" src="https://github.com/user-attachments/assets/7ee37844-d6f5-4ee7-8867-e8b553e58b22" />
+
 
 ---
 
@@ -211,9 +232,9 @@ Example:
 7. Set the Directory Services Restore Mode (DSRM) password.
 8. Continue through the wizard.
 9. Review the prerequisites.
-10. Select **Install**.
+10. Select **Install**..<img width="1060" height="820" alt="Configure a Domain Controller" src="https://github.com/user-attachments/assets/36f412db-e996-4375-a545-3a33db682a0d" />
 
-The server will restart after the domain controller installation is completed.
+The server will restart after the domain controller installation is completed
 
 ---
 
@@ -223,7 +244,8 @@ After the restart:
 
 1. Log into Windows Server.
 2. Use the domain administrator account.
-3. Verify that the server is now operating as a Domain Controller.
+3. Verify that the server is now operating as a Domain Controller.<img width="1254" height="899" alt="2 Log in to admin" src="https://github.com/user-attachments/assets/344949b8-f4e9-48db-bc5e-4223377735e1" />
+
 
 Example domain:
 
@@ -235,7 +257,8 @@ Example domain:
 
 Open:
 
-**Server Manager → Tools → Active Directory Users and Computers**
+**Server Manager → Tools → Active Directory Users and Computers**<img width="1249" height="910" alt="Active Directory Users and Computers Window" src="https://github.com/user-attachments/assets/afd335d7-79c7-4fab-bc87-3ee583db26b6" />
+
 
 ADUC is used to manage:
 
@@ -263,7 +286,8 @@ Example:
 
 `USA`
 
-5. Click **OK**.
+5. Click **OK**.<img width="1279" height="900" alt="Active Directory Creating OU " src="https://github.com/user-attachments/assets/ceb571c3-6043-4761-ab1d-51fb1e97c809" />
+
 
 Additional OUs can be created for departments, users, computers, or geographic locations.
 
@@ -303,7 +327,8 @@ Example:
 
 5. Select the appropriate group scope.
 6. Select the group type.
-7. Click **OK**.
+7. Click **OK**.<img width="1261" height="913" alt="Active directory Creating Groups" src="https://github.com/user-attachments/assets/cad1bf5a-06a2-46cb-9baf-946b3595cc74" />
+
 
 ---
 
@@ -372,7 +397,8 @@ Distribution groups do not provide resource permissions like security groups.
 9. Configure the appropriate password options.
 10. Click **Next**.
 11. Review the account information.
-12. Select **Finish**.
+12. Select **Finish**.<img width="1261" height="904" alt="Active directory New Users" src="https://github.com/user-attachments/assets/07a869ce-11c4-4f2f-8afe-70df0e4dd9b9" />
+
 
 Example:
 
@@ -438,7 +464,7 @@ After completing the initial setup, practice common administrative tasks.
 
 ---
 
-# 19. Suggested Home Lab Structure
+# 19. Home Lab Structure
 
 A basic lab can be organized like this:
 

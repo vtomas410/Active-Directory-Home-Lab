@@ -66,3 +66,5 @@ Steps:
 1. [Installing Active Directory](https://github.com/vtomas410/Installing-Active-Directory)
 2. [Creating and Setting up GPO](https://github.com/vtomas410/Creating-And-Setting-Up-GPO)
 3. [Windows Domain Join Group Policy Testing](https://github.com/vtomas410/Windows-Domain-Join-Group-Policy-Testing)
+4. [Windows Server Homelab: File Services, Network Sharing, and Group Policy Drive Mapping](https://github.com/vtomas410/Windows-Server-Homelab-File-Services-Network-Sharing-and-Group-Policy-Drive-Mapping/blob/main/README.md)
+5. 

@@ -68,4 +68,4 @@ Steps:
 3. [Windows Domain Join Group Policy Testing](https://github.com/vtomas410/Windows-Domain-Join-Group-Policy-Testing)
 4. [File Services, Network Sharing, and Group Policy Drive Mapping](https://github.com/vtomas410/Windows-Server-Homelab-File-Services-Network-Sharing-and-Group-Policy-Drive-Mapping/blob/main/README.md)
 5. [Implementing Security Policies | Fine-Grained Passwords](https://github.com/vtomas410/Implementing-Security-Policies)
-6. 
+6. [Implementing Service Accounts, Single Purpose Computers](https://github.com/vtomas410/Implementing-Service-Accounts)

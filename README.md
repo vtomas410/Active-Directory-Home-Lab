@@ -70,4 +70,5 @@ Steps:
 5. [Implementing Security Policies | Fine-Grained Passwords](https://github.com/vtomas410/Implementing-Security-Policies)
 6. [Implementing Service Accounts, Single Purpose Computers](https://github.com/vtomas410/Implementing-Service-Accounts)
 7. [Window File Sharing - Assigning Network Permissions (NFTS vs Shared)](https://github.com/vtomas410/Window-File-Sharing---Assigning-Network-Permissions-NFTS-vs-Shared-)
-8. 
+8. [Effective Permissions and Inheritance (Advanced Windows File Sharing)](https://github.com/vtomas410/Effective-Permissions-and-Inheritance-Advanced-Windows-File-Sharing-)
+9. 
